@@ -271,3 +271,82 @@ let militaryUnit = {
     },
   
   };
+
+  let mission1 = (militaryUnit)=> {
+    return `rank: ${militaryUnit.commandStructure.chiefOfStaff.rank}, name: ${militaryUnit.commandStructure.chiefOfStaff.name}, phone: ${militaryUnit.commandStructure.chiefOfStaff.contact.phone}`
+  }
+
+  //console.log(mission1(militaryUnit));
+  
+  let mission2 = (militaryUnit)=> {
+    let personal = 0;
+    militaryUnit.personnel.forEach((person)=>{
+      personal += 1;
+    })
+    return `amount of personnal ${personal}`
+  }
+
+   //console.log(mission2(militaryUnit));
+
+   let mission3 = (mis, militaryUnit) => {
+        let newHistory = {
+          eventDate: militaryUnit.currentDeployment.startDate,
+          eventDescription: `${militaryUnit.currentDeployment.mission} in ${militaryUnit.currentDeployment.location}`
+        }
+
+        militaryUnit.history.push(newHistory)
+        militaryUnit.currentDeployment = mis;
+        return militaryUnit
+   }
+
+  //  let mis = {
+  
+  //   missionName: "Operation Desert Storm",
+
+  //   startDate: "1991-01-17",
+
+  //   endDate: "1991-02-28",
+
+  //   description: "Combat operation to liberate Kuwait from Iraqi occupation.",
+
+  // };
+
+  // console.log(mission3(mis, militaryUnit));
+
+  let mission4 = (fireArm, militaryUnit)=>{
+    let flag = false;
+    militaryUnit.equipment.firearms.forEach((piss)=>{
+      if (fireArm.status==piss.status && fireArm.type == piss.type)
+      {
+        piss.quantity += fireArm.quantity
+        flag = true;
+      }
+    })
+    if(flag==false)
+    {
+      militaryUnit.equipment.firearms.push(fireArm)
+    }
+    return militaryUnit;
+  }
+
+  //console.log(mission4(x, militaryUnit));
+  
+  let mission5 = (militaryUnit)=>{
+    let totalDuration = 0;
+    
+    militaryUnit.trainingPrograms.forEach((prog)=>{
+      totalDuration += prog.duration;
+    })
+    return `total duration of training ${totalDuration}`;
+  }
+
+  //console.log(mission5(militaryUnit));
+  
+  module.exports = {
+    mission1,
+    mission2,
+    mission3,
+    mission4,
+    mission5
+  }
+ 
