@@ -1,0 +1,75 @@
+#bunner{
+    background-color: rgb(0, 102, 0);
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 25px
+}
+
+#navBar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size:15px
+}
+
+
+.nav{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 30px;
+    font-size: 13px;
+}
+
+#main{
+    background-color: rgb(235, 235, 235);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 1000px;
+}
+
+#topPage{
+    background-color: white;
+    
+    padding: 1px;
+    margin: 15px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#h2{
+    color: rgb(0, 82, 0);
+    font-size: xx-large
+}
+
+.details{
+    display: block;
+    padding: 10px;
+}
+
+.input{
+    margin-top: 10px ;
+    width: 99%;
+    height: 15px;
+}
+
+
+
+
+
+
+
+
+#footer{
+    background-color: rgb(0, 102, 0);
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    color: white;
+    margin: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
